@@ -1,0 +1,105 @@
+<svg width="700" height="220" viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg">
+  <rect width="700" height="220" rx="10" fill="#0d1117"/>
+  <rect x="1" y="1" width="698" height="218" rx="9" fill="none" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="350" y="22" font-family="'Courier New', monospace" font-size="11" fill="#6e7681" text-anchor="middle" letter-spacing="2">TFT DISPLAY SCREENS</text>
+
+  <!-- Screen helper: each screen is 120x80 at 2x scale (real is 160x128) -->
+  <!-- We'll show 5 screens at ~120x80 each -->
+
+  <!-- ── SCREEN 1: Splash ── -->
+  <rect x="20" y="35" width="120" height="80" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <!-- concentric squares -->
+  <rect x="50" y="48" width="60" height="54" rx="2" fill="none" stroke="#161b22" stroke-width="1"/>
+  <rect x="44" y="42" width="72" height="64" rx="2" fill="none" stroke="#161b22" stroke-width="1"/>
+  <!-- w logo mini (scale 3, 5x5=15px wide) -->
+  <rect x="68" y="48" width="3" height="3" fill="#60a5fa"/><rect x="73" y="48" width="3" height="3" fill="#60a5fa"/>
+  <rect x="78" y="48" width="3" height="3" fill="#60a5fa"/><rect x="83" y="48" width="3" height="3" fill="#60a5fa"/>
+  <rect x="88" y="48" width="3" height="3" fill="#60a5fa"/>
+  <rect x="68" y="53" width="3" height="3" fill="#60a5fa"/><rect x="88" y="53" width="3" height="3" fill="#60a5fa"/>
+  <rect x="68" y="58" width="3" height="3" fill="#93c5fd"/><rect x="78" y="58" width="3" height="3" fill="#93c5fd"/>
+  <rect x="88" y="58" width="3" height="3" fill="#93c5fd"/>
+  <rect x="73" y="63" width="3" height="3" fill="#bfdbfe"/><rect x="83" y="63" width="3" height="3" fill="#bfdbfe"/>
+  <rect x="73" y="68" width="3" height="3" fill="#dbeafe"/><rect x="83" y="68" width="3" height="3" fill="#dbeafe"/>
+  <text x="80" y="82" font-family="'Courier New', monospace" font-size="7" fill="#f0f6fc" text-anchor="middle" font-weight="bold">weys</text>
+  <line x1="38" y1="88" x2="122" y2="88" stroke="#1d4ed8" stroke-width="1"/>
+  <text x="80" y="97" font-family="'Courier New', monospace" font-size="6" fill="#374151" text-anchor="middle">AI  Pico W  USB</text>
+  <text x="80" y="108" font-family="'Courier New', monospace" font-size="6" fill="#1d4ed8" text-anchor="middle">v1.0</text>
+  <text x="80" y="125" font-family="'Courier New', monospace" font-size="9" fill="#4b5563" text-anchor="middle">Splash</text>
+
+  <!-- ── SCREEN 2: Ready ── -->
+  <rect x="155" y="35" width="120" height="80" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <rect x="155" y="35" width="120" height="14" rx="4" fill="#161b22"/>
+  <rect x="157" y="35" width="120" height="10" rx="4" fill="#161b22"/>
+  <!-- w mini logo -->
+  <rect x="160" y="38" width="2" height="2" fill="#60a5fa"/><rect x="164" y="38" width="2" height="2" fill="#60a5fa"/>
+  <rect x="168" y="38" width="2" height="2" fill="#60a5fa"/><rect x="172" y="38" width="2" height="2" fill="#60a5fa"/>
+  <rect x="176" y="38" width="2" height="2" fill="#60a5fa"/>
+  <rect x="160" y="42" width="2" height="2" fill="#60a5fa"/><rect x="176" y="42" width="2" height="2" fill="#60a5fa"/>
+  <text x="195" y="47" font-family="'Courier New', monospace" font-size="7" fill="#f0f6fc" font-weight="bold">weys</text>
+  <circle cx="268" cy="41" r="4" fill="#166534"/>
+  <circle cx="268" cy="41" r="2.5" fill="#4ade80"/>
+  <line x1="155" y1="50" x2="275" y2="50" stroke="#21262d" stroke-width="1"/>
+  <text x="163" y="61" font-family="'Courier New', monospace" font-size="6" fill="#4b5563">IP ADDRESS</text>
+  <text x="163" y="71" font-family="'Courier New', monospace" font-size="8" fill="#60a5fa" font-weight="bold">192.168.1.42</text>
+  <line x1="163" y1="77" x2="267" y2="77" stroke="#21262d" stroke-width="1"/>
+  <text x="163" y="85" font-family="'Courier New', monospace" font-size="5.5" fill="#4b5563">LANGUAGE</text>
+  <rect x="163" y="88" width="28" height="10" rx="3" fill="#92400e"/>
+  <text x="177" y="96" font-family="'Courier New', monospace" font-size="6" fill="#fbbf24" text-anchor="middle" font-weight="bold">COBOL</text>
+  <text x="205" y="85" font-family="'Courier New', monospace" font-size="5.5" fill="#4b5563">PROVIDER</text>
+  <rect x="205" y="88" width="30" height="10" rx="3" fill="#1e3a8a"/>
+  <text x="220" y="96" font-family="'Courier New', monospace" font-size="6" fill="#93c5fd" text-anchor="middle">Gemini</text>
+  <text x="163" y="108" font-family="'Courier New', monospace" font-size="7" fill="#4ade80">Ready to type...</text>
+  <text x="215" y="125" font-family="'Courier New', monospace" font-size="9" fill="#4b5563" text-anchor="middle">Ready</text>
+
+  <!-- ── SCREEN 3: Typing ── -->
+  <rect x="290" y="35" width="120" height="80" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <rect x="290" y="35" width="120" height="14" rx="4" fill="#161b22"/>
+  <rect x="292" y="35" width="120" height="10" rx="4" fill="#161b22"/>
+  <text x="298" y="47" font-family="'Courier New', monospace" font-size="7" fill="#60a5fa" font-weight="bold">weys</text>
+  <rect x="364" y="37" width="40" height="10" rx="3" fill="#92400e"/>
+  <text x="384" y="45" font-family="'Courier New', monospace" font-size="6" fill="#fbbf24" text-anchor="middle" font-weight="bold">COBOL</text>
+  <line x1="290" y1="50" x2="410" y2="50" stroke="#21262d" stroke-width="1"/>
+  <text x="298" y="59" font-family="'Courier New', monospace" font-size="6" fill="#4b5563">TYPING IN PROGRESS</text>
+  <text x="403" y="59" font-family="'Courier New', monospace" font-size="6" fill="#60a5fa" text-anchor="end">63%</text>
+  <!-- progress bar -->
+  <rect x="298" y="62" width="104" height="8" rx="2" fill="#161b22"/>
+  <rect x="298" y="62" width="66" height="8" rx="2" fill="#1d4ed8"/>
+  <line x1="298" y1="76" x2="402" y2="76" stroke="#21262d" stroke-width="1"/>
+  <text x="298" y="84" font-family="'Courier New', monospace" font-size="6" fill="#4b5563">CHARS</text>
+  <text x="298" y="93" font-family="'Courier New', monospace" font-size="7" fill="#f0f6fc" font-weight="bold">620/984</text>
+  <text x="360" y="84" font-family="'Courier New', monospace" font-size="6" fill="#4b5563">DELAY</text>
+  <text x="360" y="93" font-family="'Courier New', monospace" font-size="7" fill="#4ade80" font-weight="bold">50ms</text>
+  <text x="350" y="125" font-family="'Courier New', monospace" font-size="9" fill="#4b5563" text-anchor="middle">Typing</text>
+
+  <!-- ── SCREEN 4: Done ── -->
+  <rect x="425" y="35" width="120" height="80" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <rect x="425" y="35" width="120" height="14" rx="4" fill="#161b22"/>
+  <rect x="427" y="35" width="120" height="10" rx="4" fill="#161b22"/>
+  <text x="433" y="47" font-family="'Courier New', monospace" font-size="7" fill="#60a5fa" font-weight="bold">weys</text>
+  <rect x="497" y="37" width="42" height="10" rx="3" fill="#166534"/>
+  <text x="518" y="45" font-family="'Courier New', monospace" font-size="6" fill="#f0f6fc" text-anchor="middle" font-weight="bold">DONE!</text>
+  <line x1="425" y1="50" x2="545" y2="50" stroke="#21262d" stroke-width="1"/>
+  <circle cx="485" cy="72" r="18" fill="#166534"/>
+  <circle cx="485" cy="72" r="14" fill="#4ade80"/>
+  <text x="485" y="76" font-family="'Courier New', monospace" font-size="9" fill="#166534" text-anchor="middle" font-weight="bold">OK</text>
+  <text x="485" y="96" font-family="'Courier New', monospace" font-size="6" fill="#4ade80" text-anchor="middle">984 chars typed</text>
+  <rect x="433" y="101" width="28" height="9" rx="3" fill="#92400e"/>
+  <text x="447" y="108" font-family="'Courier New', monospace" font-size="5.5" fill="#fbbf24" text-anchor="middle" font-weight="bold">COBOL</text>
+  <rect x="465" y="101" width="32" height="9" rx="3" fill="#1e3a8a"/>
+  <text x="481" y="108" font-family="'Courier New', monospace" font-size="5.5" fill="#93c5fd" text-anchor="middle">Gemini</text>
+  <text x="485" y="125" font-family="'Courier New', monospace" font-size="9" fill="#4b5563" text-anchor="middle">Done</text>
+
+  <!-- ── SCREEN 5: Error ── -->
+  <rect x="560" y="35" width="120" height="80" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <rect x="560" y="35" width="120" height="14" rx="4" fill="#7f1d1d"/>
+  <rect x="562" y="35" width="120" height="10" rx="4" fill="#7f1d1d"/>
+  <text x="620" y="47" font-family="'Courier New', monospace" font-size="7" fill="#fecaca" text-anchor="middle" font-weight="bold">weys ERROR</text>
+  <line x1="560" y1="50" x2="680" y2="50" stroke="#21262d" stroke-width="1"/>
+  <text x="568" y="62" font-family="'Courier New', monospace" font-size="6" fill="#f87171">Could not start:</text>
+  <text x="568" y="72" font-family="'Courier New', monospace" font-size="6" fill="#6b7280">Wrong WiFi</text>
+  <text x="568" y="81" font-family="'Courier New', monospace" font-size="6" fill="#6b7280">password</text>
+  <text x="568" y="108" font-family="'Courier New', monospace" font-size="5.5" fill="#374151">Power cycle to retry</text>
+  <text x="620" y="125" font-family="'Courier New', monospace" font-size="9" fill="#4b5563" text-anchor="middle">Error</text>
+</svg>

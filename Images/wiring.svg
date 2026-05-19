@@ -1,0 +1,156 @@
+<svg width="700" height="340" viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="700" height="340" rx="12" fill="#0d1117"/>
+  <rect x="1" y="1" width="698" height="338" rx="11" fill="none" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="350" y="30" font-family="'Courier New', monospace" font-size="13" fill="#8b949e" text-anchor="middle" letter-spacing="2">TFT WIRING DIAGRAM</text>
+
+  <!-- ── PICO W BOARD ── -->
+  <rect x="40" y="55" width="180" height="260" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="130" y="76" font-family="'Courier New', monospace" font-size="11" fill="#f0f6fc" text-anchor="middle" font-weight="bold">Pico W</text>
+
+  <!-- USB notch at top -->
+  <rect x="100" y="55" width="60" height="10" rx="3" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="130" y="63" font-family="'Courier New', monospace" font-size="7" fill="#6e7681" text-anchor="middle">USB</text>
+
+  <!-- Pico W pins (right side) — label + dot -->
+  <!-- 3.3V -->
+  <circle cx="220" cy="100" r="4" fill="#f87171"/>
+  <rect x="175" y="92" width="40" height="16" rx="2" fill="#1c2938"/>
+  <text x="195" y="104" font-family="'Courier New', monospace" font-size="9" fill="#93c5fd" text-anchor="middle">3.3V</text>
+
+  <!-- GND -->
+  <circle cx="220" cy="125" r="4" fill="#374151"/>
+  <rect x="175" y="117" width="40" height="16" rx="2" fill="#1c1c1c"/>
+  <text x="195" y="129" font-family="'Courier New', monospace" font-size="9" fill="#8b949e" text-anchor="middle">GND</text>
+
+  <!-- GP8 DC -->
+  <circle cx="220" cy="150" r="4" fill="#60a5fa"/>
+  <rect x="175" y="142" width="40" height="16" rx="2" fill="#1c2938"/>
+  <text x="195" y="154" font-family="'Courier New', monospace" font-size="9" fill="#93c5fd" text-anchor="middle">GP8</text>
+
+  <!-- GP9 CS -->
+  <circle cx="220" cy="175" r="4" fill="#60a5fa"/>
+  <rect x="175" y="167" width="40" height="16" rx="2" fill="#1c2938"/>
+  <text x="195" y="179" font-family="'Courier New', monospace" font-size="9" fill="#93c5fd" text-anchor="middle">GP9</text>
+
+  <!-- GP10 SCK -->
+  <circle cx="220" cy="200" r="4" fill="#60a5fa"/>
+  <rect x="170" y="192" width="46" height="16" rx="2" fill="#1c2938"/>
+  <text x="193" y="204" font-family="'Courier New', monospace" font-size="9" fill="#93c5fd" text-anchor="middle">GP10</text>
+
+  <!-- GP11 MOSI -->
+  <circle cx="220" cy="225" r="4" fill="#60a5fa"/>
+  <rect x="170" y="217" width="46" height="16" rx="2" fill="#1c2938"/>
+  <text x="193" y="229" font-family="'Courier New', monospace" font-size="9" fill="#93c5fd" text-anchor="middle">GP11</text>
+
+  <!-- GP12 RST -->
+  <circle cx="220" cy="250" r="4" fill="#60a5fa"/>
+  <rect x="170" y="242" width="46" height="16" rx="2" fill="#1c2938"/>
+  <text x="193" y="254" font-family="'Courier New', monospace" font-size="9" fill="#93c5fd" text-anchor="middle">GP12</text>
+
+  <!-- 3.3V BL -->
+  <circle cx="220" cy="275" r="4" fill="#f87171"/>
+  <rect x="170" y="267" width="46" height="16" rx="2" fill="#1c2938"/>
+  <text x="193" y="279" font-family="'Courier New', monospace" font-size="9" fill="#93c5fd" text-anchor="middle">3.3V</text>
+
+  <!-- ── TFT BOARD ── -->
+  <rect x="480" y="55" width="180" height="260" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="570" y="76" font-family="'Courier New', monospace" font-size="11" fill="#f0f6fc" text-anchor="middle" font-weight="bold">1.8" TFT</text>
+  <text x="570" y="90" font-family="'Courier New', monospace" font-size="8" fill="#6e7681" text-anchor="middle">ST7735 · 160×128 · 65K colors</text>
+
+  <!-- TFT pins (left side) -->
+  <!-- VCC -->
+  <circle cx="480" cy="110" r="4" fill="#f87171"/>
+  <rect x="485" y="102" width="44" height="16" rx="2" fill="#2d1a1a"/>
+  <text x="507" y="114" font-family="'Courier New', monospace" font-size="9" fill="#f87171" text-anchor="middle">VCC</text>
+
+  <!-- GND -->
+  <circle cx="480" cy="135" r="4" fill="#374151"/>
+  <rect x="485" y="127" width="44" height="16" rx="2" fill="#1c1c1c"/>
+  <text x="507" y="139" font-family="'Courier New', monospace" font-size="9" fill="#8b949e" text-anchor="middle">GND</text>
+
+  <!-- DC -->
+  <circle cx="480" cy="160" r="4" fill="#60a5fa"/>
+  <rect x="485" y="152" width="44" height="16" rx="2" fill="#1c2938"/>
+  <text x="507" y="164" font-family="'Courier New', monospace" font-size="9" fill="#93c5fd" text-anchor="middle">DC</text>
+
+  <!-- CS -->
+  <circle cx="480" cy="185" r="4" fill="#60a5fa"/>
+  <rect x="485" y="177" width="44" height="16" rx="2" fill="#1c2938"/>
+  <text x="507" y="189" font-family="'Courier New', monospace" font-size="9" fill="#93c5fd" text-anchor="middle">CS</text>
+
+  <!-- SCK -->
+  <circle cx="480" cy="210" r="4" fill="#60a5fa"/>
+  <rect x="485" y="202" width="44" height="16" rx="2" fill="#1c2938"/>
+  <text x="507" y="214" font-family="'Courier New', monospace" font-size="9" fill="#93c5fd" text-anchor="middle">SCK</text>
+
+  <!-- MOSI -->
+  <circle cx="480" cy="235" r="4" fill="#60a5fa"/>
+  <rect x="485" y="227" width="44" height="16" rx="2" fill="#1c2938"/>
+  <text x="507" y="239" font-family="'Courier New', monospace" font-size="9" fill="#93c5fd" text-anchor="middle">MOSI</text>
+
+  <!-- RST -->
+  <circle cx="480" cy="260" r="4" fill="#60a5fa"/>
+  <rect x="485" y="252" width="44" height="16" rx="2" fill="#1c2938"/>
+  <text x="507" y="264" font-family="'Courier New', monospace" font-size="9" fill="#93c5fd" text-anchor="middle">RST</text>
+
+  <!-- BL -->
+  <circle cx="480" cy="285" r="4" fill="#f87171"/>
+  <rect x="485" y="277" width="44" height="16" rx="2" fill="#2d1a1a"/>
+  <text x="507" y="289" font-family="'Courier New', monospace" font-size="9" fill="#f87171" text-anchor="middle">BL</text>
+
+  <!-- ── WIRES ── -->
+  <!-- VCC 3.3V red -->
+  <path d="M224 100 Q350 100 476 110" fill="none" stroke="#f87171" stroke-width="1.8" stroke-dasharray="none"/>
+  <!-- GND black/gray -->
+  <path d="M224 125 Q350 125 476 135" fill="none" stroke="#6e7681" stroke-width="1.8"/>
+  <!-- DC GP8 blue -->
+  <path d="M224 150 Q350 148 476 160" fill="none" stroke="#60a5fa" stroke-width="1.8"/>
+  <!-- CS GP9 blue -->
+  <path d="M224 175 Q350 173 476 185" fill="none" stroke="#60a5fa" stroke-width="1.8"/>
+  <!-- SCK GP10 blue -->
+  <path d="M224 200 Q350 200 476 210" fill="none" stroke="#60a5fa" stroke-width="1.8"/>
+  <!-- MOSI GP11 blue -->
+  <path d="M224 225 Q350 225 476 235" fill="none" stroke="#60a5fa" stroke-width="1.8"/>
+  <!-- RST GP12 blue -->
+  <path d="M224 250 Q350 250 476 260" fill="none" stroke="#60a5fa" stroke-width="1.8"/>
+  <!-- BL 3.3V red -->
+  <path d="M224 275 Q350 275 476 285" fill="none" stroke="#f87171" stroke-width="1.8" stroke-dasharray="5 3"/>
+
+  <!-- ── WIRE LABELS ── -->
+  <rect x="320" y="92" width="60" height="14" rx="3" fill="#0d1117"/>
+  <text x="350" y="103" font-family="'Courier New', monospace" font-size="9" fill="#f87171" text-anchor="middle">3.3V power</text>
+
+  <rect x="320" y="118" width="60" height="14" rx="3" fill="#0d1117"/>
+  <text x="350" y="129" font-family="'Courier New', monospace" font-size="9" fill="#6e7681" text-anchor="middle">ground</text>
+
+  <rect x="325" y="143" width="50" height="14" rx="3" fill="#0d1117"/>
+  <text x="350" y="154" font-family="'Courier New', monospace" font-size="9" fill="#60a5fa" text-anchor="middle">data/cmd</text>
+
+  <rect x="328" y="168" width="44" height="14" rx="3" fill="#0d1117"/>
+  <text x="350" y="179" font-family="'Courier New', monospace" font-size="9" fill="#60a5fa" text-anchor="middle">chip sel</text>
+
+  <rect x="328" y="193" width="44" height="14" rx="3" fill="#0d1117"/>
+  <text x="350" y="204" font-family="'Courier New', monospace" font-size="9" fill="#60a5fa" text-anchor="middle">SPI clk</text>
+
+  <rect x="325" y="218" width="50" height="14" rx="3" fill="#0d1117"/>
+  <text x="350" y="229" font-family="'Courier New', monospace" font-size="9" fill="#60a5fa" text-anchor="middle">SPI data</text>
+
+  <rect x="330" y="243" width="40" height="14" rx="3" fill="#0d1117"/>
+  <text x="350" y="254" font-family="'Courier New', monospace" font-size="9" fill="#60a5fa" text-anchor="middle">reset</text>
+
+  <rect x="316" y="268" width="68" height="14" rx="3" fill="#0d1117"/>
+  <text x="350" y="279" font-family="'Courier New', monospace" font-size="9" fill="#f87171" text-anchor="middle">backlight</text>
+
+  <!-- Legend -->
+  <line x1="40" y1="320" x2="65" y2="320" stroke="#f87171" stroke-width="2"/>
+  <text x="70" y="324" font-family="'Courier New', monospace" font-size="9" fill="#8b949e">Power (3.3V)</text>
+  <line x1="160" y1="320" x2="185" y2="320" stroke="#6e7681" stroke-width="2"/>
+  <text x="190" y="324" font-family="'Courier New', monospace" font-size="9" fill="#8b949e">Ground</text>
+  <line x1="260" y1="320" x2="285" y2="320" stroke="#60a5fa" stroke-width="2"/>
+  <text x="290" y="324" font-family="'Courier New', monospace" font-size="9" fill="#8b949e">SPI / control</text>
+  <line x1="390" y1="320" x2="415" y2="320" stroke="#f87171" stroke-width="2" stroke-dasharray="5 3"/>
+  <text x="420" y="324" font-family="'Courier New', monospace" font-size="9" fill="#8b949e">Backlight (always on)</text>
+</svg>

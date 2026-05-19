@@ -1,0 +1,60 @@
+<svg width="700" height="120" viewBox="0 0 700 120" xmlns="http://www.w3.org/2000/svg">
+  <rect width="700" height="120" rx="10" fill="#0d1117"/>
+  <rect x="1" y="1" width="698" height="118" rx="9" fill="none" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Node 1: Phone -->
+  <rect x="20" y="30" width="110" height="60" rx="8" fill="#161b22" stroke="#1c2e4a" stroke-width="1.5"/>
+  <text x="75" y="53" font-family="'Courier New', monospace" font-size="18" fill="#f0f6fc" text-anchor="middle">📱</text>
+  <text x="75" y="70" font-family="'Courier New', monospace" font-size="9" fill="#8b949e" text-anchor="middle">mobile app</text>
+  <text x="75" y="82" font-family="'Courier New', monospace" font-size="8" fill="#374151" text-anchor="middle">index.html</text>
+
+  <!-- Arrow 1 -->
+  <line x1="133" y1="60" x2="163" y2="60" stroke="#374151" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="148" y="52" font-family="'Courier New', monospace" font-size="7" fill="#4d7c0f" text-anchor="middle">WiFi</text>
+  <text x="148" y="62" font-family="'Courier New', monospace" font-size="7" fill="#374151" text-anchor="middle">prompt</text>
+
+  <!-- Node 2: AI -->
+  <rect x="165" y="30" width="110" height="60" rx="8" fill="#161b22" stroke="#1a2e1a" stroke-width="1.5"/>
+  <text x="220" y="53" font-family="'Courier New', monospace" font-size="18" fill="#f0f6fc" text-anchor="middle">🤖</text>
+  <text x="220" y="70" font-family="'Courier New', monospace" font-size="9" fill="#8b949e" text-anchor="middle">AI API</text>
+  <text x="220" y="82" font-family="'Courier New', monospace" font-size="8" fill="#374151" text-anchor="middle">Gemini / Groq</text>
+
+  <!-- Arrow 2 -->
+  <line x1="278" y1="60" x2="308" y2="60" stroke="#374151" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="293" y="52" font-family="'Courier New', monospace" font-size="7" fill="#6e7681" text-anchor="middle">code</text>
+  <text x="293" y="62" font-family="'Courier New', monospace" font-size="7" fill="#374151" text-anchor="middle">only</text>
+
+  <!-- Node 3: App again (receives) -->
+  <rect x="310" y="30" width="110" height="60" rx="8" fill="#161b22" stroke="#1c2e4a" stroke-width="1.5"/>
+  <text x="365" y="53" font-family="'Courier New', monospace" font-size="18" fill="#f0f6fc" text-anchor="middle">📱</text>
+  <text x="365" y="70" font-family="'Courier New', monospace" font-size="9" fill="#8b949e" text-anchor="middle">review code</text>
+  <text x="365" y="82" font-family="'Courier New', monospace" font-size="8" fill="#374151" text-anchor="middle">tap to send</text>
+
+  <!-- Arrow 3 -->
+  <line x1="423" y1="60" x2="453" y2="60" stroke="#374151" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="438" y="52" font-family="'Courier New', monospace" font-size="7" fill="#4d7c0f" text-anchor="middle">WiFi</text>
+  <text x="438" y="62" font-family="'Courier New', monospace" font-size="7" fill="#374151" text-anchor="middle">POST</text>
+
+  <!-- Node 4: Pico W -->
+  <rect x="455" y="30" width="110" height="60" rx="8" fill="#161b22" stroke="#2d2d1a" stroke-width="1.5"/>
+  <text x="510" y="53" font-family="'Courier New', monospace" font-size="18" fill="#f0f6fc" text-anchor="middle">🖥</text>
+  <text x="510" y="70" font-family="'Courier New', monospace" font-size="9" fill="#8b949e" text-anchor="middle">Pico W</text>
+  <text x="510" y="82" font-family="'Courier New', monospace" font-size="8" fill="#374151" text-anchor="middle">main.py + TFT</text>
+
+  <!-- Arrow 4 -->
+  <line x1="568" y1="60" x2="598" y2="60" stroke="#374151" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="583" y="52" font-family="'Courier New', monospace" font-size="7" fill="#6e4d7c" text-anchor="middle">USB</text>
+  <text x="583" y="62" font-family="'Courier New', monospace" font-size="7" fill="#374151" text-anchor="middle">HID</text>
+
+  <!-- Node 5: PC -->
+  <rect x="600" y="30" width="80" height="60" rx="8" fill="#1c2e4a" stroke="#1c3a6e" stroke-width="1.5"/>
+  <text x="640" y="53" font-family="'Courier New', monospace" font-size="18" fill="#f0f6fc" text-anchor="middle">💻</text>
+  <text x="640" y="70" font-family="'Courier New', monospace" font-size="9" fill="#60a5fa" text-anchor="middle">your PC</text>
+  <text x="640" y="82" font-family="'Courier New', monospace" font-size="8" fill="#374151" text-anchor="middle">code typed!</text>
+
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#374151" stroke-width="1.5" stroke-linecap="round"/>
+    </marker>
+  </defs>
+</svg>
