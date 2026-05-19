@@ -1,5 +1,13 @@
 # weys
 
+<p align="center">
+  <img src="images/banner.svg" alt="weys banner" width="100%"/>
+</p>
+
+<p align="center">
+  <img src="web/logo.svg" alt="weys logo" width="100" height="100"/>
+</p>
+
 A hardware + software project that lets you describe code on your phone, generate it with an AI API, and have it automatically typed on your PC via a Raspberry Pi Pico W acting as a USB keyboard — no copy-pasting, no switching windows manually.
 
 Primary use case: **COBOL and JCL** code generation, with support for Java, Python, C++, JavaScript, Kotlin, Go, TypeScript, and Rust.
@@ -8,26 +16,9 @@ Primary use case: **COBOL and JCL** code generation, with support for Java, Pyth
 
 ## How It Works
 
-```
-📱 Mobile App (browser)
-      │
-      │  Home WiFi — HTTP
-      ▼
-🤖 AI API  (Gemini / Groq / OpenRouter / OpenAI / Claude / Custom)
-      │
-      │  raw code only — no explanation
-      ▼
-📱 Mobile App sends code to Pico W
-      │
-      │  Home WiFi — HTTP POST
-      ▼
-🖥️  Raspberry Pi Pico W  (main.py)
-      │    └─ 1.8" TFT display shows live status
-      │
-      │  USB HID — acts as a keyboard
-      ▼
-💻  Your PC — code is typed automatically
-```
+<p align="center">
+  <img src="images/flow.svg" alt="weys flow diagram" width="100%"/>
+</p>
 
 1. Open settings in the mobile app — pick language and AI provider
 2. Type a prompt: *"write a COBOL program to add two numbers"*
@@ -109,6 +100,10 @@ Connect the 1.8" ST7735 TFT to the Pico W as follows:
 | RST | GP12 (pin 16) | Reset |
 | BL | 3.3V (pin 36) | Backlight always on |
 
+<p align="center">
+  <img src="images/wiring.svg" alt="TFT wiring diagram" width="100%"/>
+</p>
+
 ---
 
 ## Display Screens
@@ -123,6 +118,10 @@ The TFT shows different screens depending on state:
 | **Typing** | While typing | Progress bar, char count, delay, provider |
 | **Done** | 3 sec after finish | Char count, language, provider badges |
 | **Error** | WiFi failure | Error message, retry instruction |
+
+<p align="center">
+  <img src="images/screens.svg" alt="TFT display screens" width="100%"/>
+</p>
 
 The **Ready screen shows the IP address in large text** — you no longer need to open a serial monitor to find it.
 
