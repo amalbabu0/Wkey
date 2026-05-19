@@ -17,7 +17,7 @@ Primary use case: **COBOL and JCL** code generation, with support for Java, Pyth
 ## How It Works
 
 <p align="center">
-  <img src="images/flow.svg" alt="weys flow diagram" width="100%"/>
+  <img src="Images/flow.svg" alt="weys flow diagram" width="100%"/>
 </p>
 
 1. Open settings in the mobile app — pick language and AI provider
