@@ -1,7 +1,7 @@
 # weys
 
 <p align="center">
-  <img src="images/banner.svg" alt="weys banner" width="100%"/>
+  <img src="Images/banner.svg" alt="weys banner" width="100%"/>
 </p>
 
 <p align="center">
