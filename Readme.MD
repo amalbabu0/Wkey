@@ -101,7 +101,7 @@ Connect the 1.8" ST7735 TFT to the Pico W as follows:
 | BL | 3.3V (pin 36) | Backlight always on |
 
 <p align="center">
-  <img src="images/wiring.svg" alt="TFT wiring diagram" width="100%"/>
+  <img src="Images/wiring.svg" alt="TFT wiring diagram" width="100%"/>
 </p>
 
 ---
