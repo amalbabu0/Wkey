@@ -7,9 +7,7 @@
 <p align="center"><strong>Speak to your phone, watch your computer type the code for you.</strong></p>
 
 <p align="center">
-  Developed by <strong>Amal Babu</strong> &nbsp;·&nbsp;
-  <a href="https://amalbabu.xyz">amalbabu.xyz</a> &nbsp;·&nbsp;
-  <a href="https://github.com/amalbabu0">github.com/amalbabu0</a>
+  Developed by <strong><a href="https://amalbabu.xyz">Amal Babu</a></strong> &nbsp;·&nbsp;
 </p>
 
 ---
