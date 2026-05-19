@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <title>weys logo</title>
+  <defs>
+    <linearGradient id="weysBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a2744"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded square badge -->
+  <rect x="2" y="2" width="60" height="60" rx="14" ry="14" fill="url(#weysBg)"/>
+  <!-- Wi-Fi arcs (signal) -->
+  <g fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" opacity="0.85">
+    <path d="M22 16 Q32 8 42 16"/>
+    <path d="M26 20 Q32 15 38 20"/>
+    <circle cx="32" cy="24.5" r="1.6" fill="#ffffff" stroke="none"/>
+  </g>
+  <!-- Stylized "W" — keyboard keystroke marks -->
+  <g fill="none" stroke="#ffffff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="14 32 20 50 26 38 32 50 38 38 44 50 50 32"/>
+  </g>
+  <!-- Underline accent (typing line) -->
+  <line x1="16" y1="55" x2="48" y2="55" stroke="#60a5fa" stroke-width="2" stroke-linecap="round"/>
+</svg>

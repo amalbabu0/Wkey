@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>weys</title>
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="apple-touch-icon" href="logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════ -->
+<header>
+  <div class="header-inner">
+    <div class="logo-wrap">
+      <img src="logo.svg" alt="weys logo" class="logo-img">
+    </div>
+    <div class="header-text">
+      <div class="header-title">weys</div>
+      <div class="header-sub">AI → Pico W → USB keyboard</div>
+    </div>
+    <div class="pico-badge" id="picoBadge" onclick="pingPico()">
+      <span class="status-dot pulse" id="statusDot"></span>
+      <span id="statusLabel">Setup</span>
+    </div>
+    <button class="theme-btn" id="themeBtn" onclick="toggleTheme()" aria-label="Toggle theme">☀️</button>
+    <button class="icon-btn" id="settingsBtn" onclick="toggleSheet()" aria-label="Settings">
+      <svg viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="3"/>
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0
+                 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65
+                 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65
+                 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0
+                 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0
+                 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06
+                 a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0
+                 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+
+<!-- ══════════════════════════════════════════
+     SETTINGS BOTTOM SHEET
+══════════════════════════════════════════ -->
+<div class="sheet-overlay" id="overlay" onclick="closeSheet()"></div>
+
+<div class="sheet" id="sheet">
+  <div class="sheet-handle"></div>
+  <div class="sheet-header">
+    <div class="sheet-title-block">
+      <span class="sheet-title">Settings</span>
+      <span class="sheet-subtitle">Configure your AI &amp; Pico W</span>
+    </div>
+    <button class="sheet-close" onclick="closeSheet()" aria-label="Close">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="sheet-body">
+
+    <!-- ── Section: Generate ── -->
+    <div class="sheet-section">
+      <div class="sheet-section-head">
+        <span class="sheet-section-icon">✦</span>
+        <div>
+          <div class="sheet-section-title">Generate</div>
+          <div class="sheet-section-desc">Pick the language and AI service</div>
+        </div>
+      </div>
+
+    <!-- Language dropdown -->
+    <div class="field">
+      <div class="field-label">Language</div>
+      <div class="select-wrap">
+        <select class="custom-select" id="langSelect" onchange="onLangChange(this)">
+          <optgroup label="Primary">
+            <option value="COBOL|cobol" selected>COBOL — Mainframe language</option>
+            <option value="JCL|jcl">JCL — Job control language</option>
+          </optgroup>
+          <optgroup label="Other languages">
+            <option value="Java|other">Java</option>
+            <option value="Python|other">Python</option>
+            <option value="C++|other">C++</option>
+            <option value="JavaScript|other">JavaScript</option>
+            <option value="Kotlin|other">Kotlin</option>
+            <option value="Go|other">Go</option>
+            <option value="TypeScript|other">TypeScript</option>
+            <option value="Rust|other">Rust</option>
+          </optgroup>
+        </select>
+      </div>
+    </div>
+
+    <!-- AI Provider dropdown -->
+    <div class="field">
+      <div class="field-label">AI Provider</div>
+      <div class="select-wrap">
+        <select class="custom-select" id="providerSelect" onchange="onProviderChange(this.value)">
+          <option value="gemini">Gemini — Free (aistudio.google.com)</option>
+          <option value="groq">Groq — Free (console.groq.com)</option>
+          <option value="openrouter">OpenRouter — Free models</option>
+          <option value="openai">OpenAI</option>
+          <option value="claude">Claude (Anthropic)</option>
+          <option value="custom">Custom / Self-hosted</option>
+        </select>
+      </div>
+      <div class="field-hint" id="providerHint">Select a provider above.</div>
+    </div>
+    </div><!-- /sheet-section -->
+
+    <!-- ── Section: API ── -->
+    <div class="sheet-section">
+      <div class="sheet-section-head">
+        <span class="sheet-section-icon">🔑</span>
+        <div>
+          <div class="sheet-section-title">API Access</div>
+          <div class="sheet-section-desc">Your key stays in this browser only</div>
+        </div>
+      </div>
+
+    <!-- API Key -->
+    <div class="field">
+      <div class="field-label">API Key</div>
+      <input class="field-input" type="password" id="apiKey"
+             placeholder="Paste key — auto detects provider"
+             oninput="autoDetect(this.value)">
+    </div>
+
+    <!-- Model selection -->
+    <div class="field">
+      <div class="field-label">Model</div>
+      <input class="field-input" type="text" id="modelInput" placeholder="e.g. gemini-2.0-flash">
+      <div class="model-chips" id="modelChips"></div>
+    </div>
+
+    <!-- Custom base URL -->
+    <div class="field" id="customUrlField" style="display:none">
+      <div class="field-label">Base URL</div>
+      <input class="field-input" type="text" id="customUrl" placeholder="https://your-api.com/v1">
+    </div>
+    </div><!-- /sheet-section -->
+
+    <!-- ── Section: Pico W ── -->
+    <div class="sheet-section">
+      <div class="sheet-section-head">
+        <span class="sheet-section-icon">📡</span>
+        <div>
+          <div class="sheet-section-title">Pico W</div>
+          <div class="sheet-section-desc">Where to send the keystrokes</div>
+        </div>
+      </div>
+
+    <div class="field">
+      <div class="field-label">IP Address</div>
+      <input class="field-input" type="text" id="picoIp"
+             placeholder="192.168.1.X" inputmode="decimal">
+      <div class="field-hint">Shown in serial monitor after Pico W boots.</div>
+    </div>
+
+    <div class="field">
+      <div class="field-label">Typing Speed</div>
+      <div class="slider-row">
+        <span>Slow</span>
+        <input type="range" min="10" max="200" value="50" id="delaySlider"
+               oninput="updateSlider(this)">
+        <span>Fast</span>
+        <span class="delay-val" id="delayVal">50ms</span>
+      </div>
+    </div>
+    </div><!-- /sheet-section -->
+
+    <button class="save-btn ripple-c" onclick="saveConfig();addRipple(event,this)">
+      <span>Save &amp; Connect</span>
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </button>
+
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     MAIN SCROLL AREA
+══════════════════════════════════════════ -->
+<main>
+
+  <!-- ── Prompt card ── -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon" style="background:#eff6ff">✏️</div>
+      <div>
+        <div class="card-title">Prompt</div>
+        <div class="card-subtitle">Describe what to generate</div>
+      </div>
+      <!-- Live selection pills — updated by JS -->
+      <div class="selection-row" id="selectionRow">
+        <span class="sel-pill lang-cobol" id="langPill">
+          <span class="sel-pill-dot"></span>
+          <span id="langPillLabel">COBOL</span>
+        </span>
+        <span class="sel-pill provider-pill gemini" id="providerPill">
+          <span class="sel-pill-dot"></span>
+          <span id="providerPillLabel">Gemini</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="prompt-section">
+      <div class="prompt-box">
+        <textarea id="promptInput"
+          placeholder="e.g. write a program to add two numbers and print the result..."
+          rows="4"
+          oninput="onType()"></textarea>
+        <div class="prog-wrap" id="progWrap"><div class="prog-bar"></div></div>
+        <div class="prompt-bottom">
+          <span class="char-count" id="charCount">0 chars</span>
+          <button class="gen-btn ripple-c" id="genBtn"
+                  onclick="generate();addRipple(event,this)">
+            <div class="spinner" id="spinner"></div>
+            <span id="genTxt">Generate ✦</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── Code output (appears after generation) ── -->
+  <div class="code-card" id="codeCard">
+    <div class="code-topbar">
+      <div class="code-dots">
+        <div class="cdot r"></div><div class="cdot y"></div><div class="cdot g"></div>
+      </div>
+      <span class="code-lang-badge" id="codeLangBadge">output.cobol</span>
+      <div class="code-btns">
+        <button class="code-btn" onclick="copyCode()">Copy</button>
+        <button class="code-btn" onclick="clearAll()">Clear</button>
+      </div>
+    </div>
+    <!-- Skeleton while loading -->
+    <div class="skeleton-lines" id="skelLines">
+      <div class="skel-line" style="width:55%"></div>
+      <div class="skel-line" style="width:85%"></div>
+      <div class="skel-line" style="width:72%"></div>
+      <div class="skel-line" style="width:90%"></div>
+      <div class="skel-line" style="width:48%"></div>
+    </div>
+    <pre id="codeBlock"></pre>
+  </div>
+
+
+  <!-- ── Type on PC button ── -->
+  <div class="type-wrap" id="typeWrap">
+    <button class="type-btn ripple-c" id="typeBtn"
+            onclick="sendToPico();addRipple(event,this)">
+      <span class="type-icon">⌨️</span>
+      <span id="typeTxt">Type it on PC</span>
+    </button>
+    <div class="typing-progress" id="typingProgress">
+      <div class="tp-label">
+        <span>Typing in progress</span>
+        <span class="tp-cursor"></span>
+      </div>
+      <div class="tp-bar-bg"><div class="tp-bar" id="tpBar"></div></div>
+    </div>
+  </div>
+
+  <!-- ── Footer credit ── -->
+  <footer class="credit">
+    <img src="logo.svg" alt="" class="credit-logo">
+    <a href="https://amalbabu.xyz" target="_blank" rel="noopener">Amal Babu</a>
+  </footer>
+
+</main>
+
+
+<!-- ══════════════════════════════════════════
+     TOAST
+══════════════════════════════════════════ -->
+<div class="toast" id="toast">
+  <span class="toast-icon" id="toastIcon"></span>
+  <span class="toast-msg"  id="toastMsg"></span>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
