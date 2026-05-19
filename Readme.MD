@@ -120,7 +120,7 @@ The TFT shows different screens depending on state:
 | **Error** | WiFi failure | Error message, retry instruction |
 
 <p align="center">
-  <img src="images/screens.svg" alt="TFT display screens" width="100%"/>
+  <img src="Images/screens.svg" alt="TFT display screens" width="100%"/>
 </p>
 
 The **Ready screen shows the IP address in large text** — you no longer need to open a serial monitor to find it.
